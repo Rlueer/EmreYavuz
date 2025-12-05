@@ -10,7 +10,7 @@ import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your
 const splashScreen = {
   enabled: true, // set false to disable splash screen
   animation: splashAnimation,
-  duration: 2000 // Set animation duration as per your animation
+  duration: 500 // Set animation duration as per your animation
 };
 
 // Summary And Greeting Section
@@ -47,71 +47,70 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "Neler yapıyorum",
-  subTitle: "Gömülü sistemler, FPGA tabanlı dijital tasarım ve düşük seviye yazılım",
-  skills: [
-    emoji("⚡ VHDL/Verilog ile FPGA üzerinde sayısal tasarım ve testbench doğrulama"),
-    emoji("⚡ UART / SPI / I²C gibi protokollerle düşük seviye haberleşme"),
-    emoji("⚡ Gerçek zamanlı (RTOS) ve gömülü C/C++ ile sürücü/ara katman geliştirme"),
-    emoji("⚡ Vivado, ModelSim ve logic analyzer ile donanım–yazılım debug")
-  ],
-
+	subTitle:
+	  "Donanım ve yazılımı birlikte kullanarak farklı alanlarda projeler geliştiren, çok yönlü bir mühendislik yaklaşımına sahibim.",
+	skills: [
+	  emoji("⚡ FPGA tabanlı dijital tasarım, VHDL/Verilog ile modelleme ve doğrulama"),
+	  emoji("⚡ Gömülü sistem geliştirme: düşük seviye programlama, gerçek zamanlı çalışma mantığı ve donanım entegrasyonu"),
+	  emoji("⚡ Mobil uygulama geliştirme ve cihazlarla veri alışverişi yapılan uygulama mimarileri"),
+	  emoji("⚡ Sunucu tarafı uygulamalar geliştirme ve temel backend mimarileri oluşturma"),
+	  emoji("⚡ Python ile veri işleme, temel görüntü işleme ve makine öğrenimi projeleri"),
+	  emoji("⚡ Farklı teknolojileri bir araya getirerek uçtan uca çalışan proje çözümleri üretme")
+	],
   /* Make Sure to include correct Font Awesome Classname to view your icon
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
-    {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    }
-  ],
+  {
+    skillName: "C",
+    fontAwesomeClassname: "fas fa-copyright" // C sembolü için en yakın ikon
+  },
+  {
+    skillName: "C++",
+    fontAwesomeClassname: "fas fa-code"
+  },
+  {
+    skillName: "Python",
+    fontAwesomeClassname: "fab fa-python"
+  },
+  {
+    skillName: "Java",
+    fontAwesomeClassname: "fab fa-java"
+  },
+  {
+    skillName: "Dart / Flutter",
+    fontAwesomeClassname: "fas fa-mobile-alt"
+  },
+  {
+    skillName: "VHDL / Verilog",
+    fontAwesomeClassname: "fas fa-microchip"
+  },
+  {
+    skillName: "Linux",
+    fontAwesomeClassname: "fab fa-linux"
+  },
+  {
+    skillName: "Git",
+    fontAwesomeClassname: "fab fa-git-alt"
+  },
+  {
+    skillName: "Docker",
+    fontAwesomeClassname: "fab fa-docker"
+  },
+  {
+    skillName: "CI/CD",
+    fontAwesomeClassname: "fas fa-sync-alt"
+  },
+  {
+    skillName: "Node.js",
+    fontAwesomeClassname: "fab fa-node-js"
+  },
+  {
+    skillName: "PostgreSQL",
+    fontAwesomeClassname: "fas fa-database"
+  },
+
+],
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -196,6 +195,7 @@ const workExperiences = {
         "Kesinti, paket kaybı ve veri bütünlüğü problemleri için hata toleranslı özel algoritmalar geliştirdim.",
         "Uygulamayı Flutter Clean Architecture prensipleriyle modüler ve ölçeklenebilir hale getirdim."
       ]
+	  
     }
   ]
 };
@@ -213,34 +213,99 @@ const openSource = {
 
 const bigProjects = {
   title: "Projeler",
-  subtitle: "SOME",
+  subtitle: "Gerçekleştirdiğim teknik projelerden bazıları",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+	  //image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "Akıllı Çevresel İzleme ve Kontrol Sistemi (Verilog, C)",
+      projectDesc:
+        "FPGA–MCU arasında çoklu sensör verilerini gerçek zamanlı işleyen ve çift yönlü haberleşmeyle kontrol sağlayan bir izleme sistemi tasarladım. Görsel ve işitsel uyarı mekanizmalarıyla gerçek zamanlı durum takibi sağlandı.",
       footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
-        }
-        //  you can add extra buttons here.
+        { name: "Github", url: "https://github.com/EmreeYavuzz/FPGA-bitirme" },
+        { name: "Report", url: "https://github.com/EmreeYavuzz/FPGA-bitirme/blob/main/Emre_Yavuz_Grad.pdf" }
+      ],
+	  
+    },
+	{
+      projectName: "LLM Tabanlı Siber Güvenlik Olgunluk Değerlendirme Aracı",
+      projectDesc:
+        "Kuruluşların siber güvenlik olgunluğunu ölçen yapay zekâ destekli bir değerlendirme aracı geliştirdim. Sistem, kullanıcıya dinamik sorular yönelterek cevapları analiz ediyor, sonraki adımları otomatik belirliyor ve sürecin sonunda görev listesi ile kapsamlı bir rapor üretiyor.",
+      footerLink: [
+        { name: "Github", url: "https://github.com/EmreeYavuzz/CyberSecurity-LLM" },
+		{ name: "Youtube", url: "https://www.youtube.com/watch?v=Ou_M2Ii47uU" },
+		{ name: "Website", url: "https://emreeyavuzz.github.io/CyberSecurity-LLM/" },
+      ]
+    },
+	{
+      projectName: "Öğrenci Yönetim Sistemi",
+      projectDesc:
+        "Öğrenci, ders ve sınav bilgilerinin yönetildiği; çok kriterli arama, sınav ekleme, ortalama hesaplama ve tamamlanan derslerin gösterimini sağlayan full-stack bir öğrenci yönetim sistemi geliştirdim.",
+      footerLink: [
+        { name: "GitHub", url: "https://github.com/EmreeYavuzz/iqb-poc" },
+		{ name: "Website", url: "https://bulut.enesakar.com.tr/" }
+      ]
+    },
+	{
+      projectName: "Pide Dükkanı Simülasyonu (C, Multi-Threading)",
+      projectDesc:
+        "Gerçek zamanlı sipariş akışını yöneten bir restoran simülasyonu geliştirdim. Aşçı ve kuryelerin çoklu thread yapısıyla çalıştığı sistemde fırın ve teslimat gibi paylaşılan kaynakları mutex ve condition variable ile yönettim. Sipariş iptallerinde hazırlama–fırın–teslimat aşamalarını geri alarak sistemi tamamen tutarlı halde çalıştırdım.",
+      footerLink: [
+      ]
+    },
+	
+    {
+      projectName: "İşletim Sistemi ve CPU Simülatörü (Assembly, Python)",
+      projectDesc:
+        "Custom bir komut seti üzerinde çalışan bir CPU simülatörü ve temel bir işletim sistemi çekirdeği geliştirdim. CPU tarafında bellek yönetimi, kullanıcı/çekirdek modları ve syscall yapısını oluşturdum; OS tarafında thread kontrol blokları, round-robin scheduler ve context switching mekanizmalarını tasarlayarak çoklu thread çalıştırmayı sağladım.",
+      footerLink: [
+        { name: "Github", url: "https://github.com/EmreeYavuzz/os-proje" },
+        { name: "Report", url: "https://github.com/EmreeYavuzz/os-proje/blob/main/200104004003_os_project.pdf" }
+      ]
+    },
+	
+    {
+      projectName: "Yapay Zekâ Destekli Özgeçmiş Platformu OzBuild",
+      projectDesc:
+        "Kullanıcıların gerçek zamanlı olarak özgeçmiş oluşturmasını sağlayan yapay zekâ destekli bir platform geliştirdim. Sistem, dinamik içerik üretimi ve anlık güncellemeyle kullanıcı deneyimini önemli ölçüde kolaylaştırıyor.",
+      footerLink: [
+        { name: "GitHub", url: "https://github.com/EmreeYavuzz/OzBuild" },
+		{ name: "Youtube", url: "https://www.youtube.com/watch?v=0q4iHy1aO0A" },
+		{ name: "Website", url: "https://ozbuild-app.vercel.app/" },
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      projectName: "Pseudo Etiketli Anahtar Nokta Tespiti & Feature Extraction (ML)",
+      projectDesc:
+        "Görüntülerde anahtar noktaları otomatik tespit edip anlamlı özellikler çıkaran bir yapay zekâ modeli geliştirdim. Sistem, görüntü eşleştirme ve sahne analizinde kullanılmak üzere optimize edildi.",
       footerLink: [
-        {
-          name: "Visit Website",
-          url: "http://nextu.se/"
-        }
+        { name: "Github", url: "https://github.com/EmreeYavuzz/Computer-Vision-Semester-Project" },
+		{ name: "Youtube", url: "https://www.youtube.com/watch?v=P2EKmou9_Rk" },
       ]
-    }
+    },
+	{
+      projectName: "Gebze – Çok Oyunculu 3D Hayatta Kalma Oyunu",
+      projectDesc:
+        "Takım çalışmasıyla geliştirilen bir 3D hayatta kalma oyununda, dövüş mekanikleri, düşman yapay zekâsı (hareket, saldırı davranışları, karar ağacı) ve bölüm tasarımlarının oluşturulmasında görev aldım. Blueprint sistemiyle oyun içi etkileşimleri ve temel oynanış akışını geliştirdim.",
+      footerLink: [
+        { name: "GitHub", url: "https://github.com/EmreeYavuzz/OlumMakineleri" },
+		{ name: "Youtube", url: "https://www.youtube.com/watch?v=n9C2cLsDyY4" },
+		{ name: "Website", url: "https://splendid-tulumba-47b4ea.netlify.app/" },
+      ]
+    },
+    {
+      projectName: "OPIUM – Sosyal Medya / Etkinlik Uygulaması",
+      projectDesc:
+        "Kullanıcıların etkinlik oluşturup katılabildiği, gönderi paylaşabildiği ve gerçek zamanlı sohbet edebildiği çok platformlu bir sosyal medya uygulaması geliştirdim. Uygulama, akıcı bir kullanıcı deneyimi sağlayacak şekilde gerçek zamanlı veri akışıyla çalışıyor.",
+      footerLink: [
+        { name: "Drive", url: "https://drive.google.com/drive/folders/1eSJ5nVL5uqzpAtlkm8wDFMwFxvfsLCHy" },
+		{ name: "Youtube", url: "https://www.youtube.com/watch?v=eeqyQrKjxt0" },
+      ]
+    },
+
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: true
 };
+
 
 // Achievement Section
 // Include certificates, talks etc

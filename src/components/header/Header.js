@@ -50,11 +50,7 @@ function Header() {
               <a href="#Yetenekler">Yetenekler</a>
             </li>
           )}
-		  {viewBigProjects && (
-			  <li>
-				<a href="#Projeler">Projeler</a>
-			  </li>
-			)}
+		  
 			{viewEducation && (
             <li>
               <a href="#Eğitim">Eğitim</a>
@@ -65,6 +61,11 @@ function Header() {
               <a href="#İş Tecrübeleri">İş Tecrübeleri</a>
             </li>
           )}
+		  {viewBigProjects && (
+			  <li>
+				<a href="#Projeler">Projeler</a>
+			  </li>
+			)}
 		  
           {viewOpenSource && (
             <li>
